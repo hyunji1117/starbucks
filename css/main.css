@@ -12,6 +12,10 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* HEADER */
 header {
  background-color: royalblue;
@@ -40,13 +44,42 @@ header .sub-menu {
 }
 
 header .sub-menu ul.menu { 
-
+  display: flex;
 }
 
 header .sub-menu ul.menu li {
+  position: relative;
+}
 
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
 }
 
 header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+  
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+
+}
+
+header .sub-menu .search input {
+
+}
+
+header .sub-menu .search input .material-icons {
 
 }
