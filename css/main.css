@@ -120,3 +120,49 @@ header .sub-menu .search .material-icons {
 header .sub-menu .search.focused .material-icons {
   opacity: 0;
 }
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1; /* 사이트 광고까지 가릴 수 있도록 우선순위 부여 */
+  display: flex;
+}
+
+header .main-menu .item {
+
+}
+
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  
+}
+
+header .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block; /* 왜 일까? */
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: red;
+  height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  background-color: orange;
+  height: 100px;
+}
