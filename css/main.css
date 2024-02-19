@@ -7,14 +7,21 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
   
 }
-
 img {
+
   display: block;
 }
 
 a {
   text-decoration: none;
 }
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
 
 /* HEADER */
 header {
@@ -23,11 +30,8 @@ header {
  
 }
 
-header .inner {
-  width: 1000px;
+header > .inner {
   height: 120px;
-  margin: 0 auto;
-  position: relative;
 }
 
 header .logo { 
@@ -149,17 +153,40 @@ header .main-menu .item:hover .item__name {
 header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
-  left: 0;
+  left: 0; /* 곧 입력할 콘텐츠 위치 일까? */
   display: none;
 }
 
 header .main-menu .item:hover .item__contents {
-  display: block; /* 왜 일까? */
+  display: block; /* 블록으로 만들어야 화면에 출력되는 구조가 만들어진다. */
 }
 
 header .main-menu .item .item__contents .contents__menu {
   background-color: red;
   height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul {
+
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+
 }
 
 header .main-menu .item .item__contents .contents__texture {
