@@ -5,7 +5,7 @@ body {
   font-weight: 400px;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  
+  height: 3000px;
 }
 img {
 
@@ -23,11 +23,15 @@ a {
 }
 
 
+
 /* HEADER */
 header {
- background-color: #f6f5f0;
- border-bottom: 1px solid #c8c8c8;
- 
+  width: 100%; /* ② position: fixed/absolute 사용 시 가로넓이가 최소한으로 줄여드려고 하기 때문 */
+  /* position: relative; */
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed; /* ① badges를 뷰포트를 기준으로 배치하는 것 */
+  top: 0;
 }
 
 header > .inner {
@@ -121,6 +125,7 @@ header .sub-menu .search .material-icons {
   transition: .4s;
 }
 
+/* 코드 재확인 필요 */
 header .sub-menu .search.focused .material-icons {
   opacity: 0;
 }
@@ -192,6 +197,10 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
 }
 
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
+}
+
 header .main-menu .item .item__contents .contents__texture {
   /* background-color: orange;
   height: 100px; */
@@ -210,4 +219,18 @@ header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
 
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden; /* 둥굴게 깎인 모서리 밖으로 이미지가 넘치지 않게 한다. */
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
 }
