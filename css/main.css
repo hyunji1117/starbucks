@@ -62,6 +62,25 @@ a {
   background-color: #592B18;
 }
 
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
 
 
 
@@ -296,7 +315,9 @@ header .badges .badge {
 }
 
 .visual .title .btn {
-
+  position: absolute;
+  top: 259px;
+  left: 173px;
 }
 
 .visual .cup1.image {
@@ -327,4 +348,8 @@ header .badges .badge {
   position: absolute;
   bottom: 0;
   left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
 }
