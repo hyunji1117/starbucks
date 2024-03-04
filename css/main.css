@@ -353,3 +353,41 @@ header .badges .badge {
 .visual .fade-in {
   opacity: 0;
 }
+
+
+/* NOTICE */
+.notice {
+
+}
+
+.notice .notice-line {
+  position: relative;
+  /* ②inner 부모 요소로 별도 높이값 없어서 height 기본값 auto로 세로 넓이가 최대한 줄여들려고 한다. */
+  /* ④다시말해 notice-line의 높이가 200px로 되고 */
+}
+
+.notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* 가로 너비 50% 활용 */
+  height: 100%; /* ⑤여기 배경색상은 높이 100% 상태를 채우려고 하기 떄문에 */
+  background-color: #333;
+}
+
+.notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%; /* ⑤여기 배경색상은 높이 100% 상태를 채우려고 하기 떄문에 inner 높이값이 최대한으로 늘어나려고 하는 것이다. */
+  background-color: #f6f5ef;
+}
+
+.notice .notice-line .inner {
+  height: 62px;
+  /* height: 200px; ①inner 높이 200px 지정 후 적용되는 이유 */
+  /* ③inner의 높이 값 지정으로 높이200px로 적용된다. */
+  /* ⑥결국, inner 높이값 지정으로 notice-line, bg-left/right 높이값을 한번에 제어하고 있다. */
+  border: 2px solid red; /* 영역 확인 */
+}
