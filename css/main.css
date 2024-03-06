@@ -390,18 +390,66 @@ header .badges .badge {
   /* ③inner의 높이 값 지정으로 높이200px로 적용된다. */
   /* ⑥결국, inner 높이값 지정으로 notice-line, bg-left/right 높이값을 한번에 제어하고 있다. */
   /* border: 2px solid red; 영역 확인 */
-  display: flex;
-  /* 무슨 차이일까? 뷰포트에 변화가 없음 (자식요소 inner__lef,right가 수평이 되는 것?? */
+  display: flex; /* inner 박스 블럭 성질을 인라인으로 바꾸는 것. 즉,자식요소 inner__left,right가 수평이 되면서 2번 박스(inner__right)가 수평정렬 된다. */
 }
 
 .notice .notice-line .inner__left {
   width: 55%;
   height: 100%;
   background-color: #333;
+  display: flex; /* h2,.swiper-contatiner,.notice-line__more 내 밑으로 헤처모여 박스들 수평정렬 */
+  align-items: center; /* 1.기본값 strach가 center로 바뀌면서 */
+}
+
+.notice .notice-line .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.notice .notice-line .inner__left .swiper-contatiner {
+  height: 62px; /* 3.높이값을 다시 주면 원래대로 돌아온다. */
+  /* background-color: orange; 2.해당 auto높이??가 풀리면서 적용이 안된다. */
+  flex-grow: 1; 
+  /* 최대한 늘어나라 */
+}
+
+.notice .notice-line .inner__left .notice-line__more {
+  width: 62px;
+  height: 62px;
+  display: flex; /* 아이콘 가운데 정렬 밑작업 으로 h2(박스1),swiper-contatiner(박스2),notice-line__more(박스3)이 수평으로 성질 전환됨. */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+
+.notice .notice-line .inner__left .notice-line__more .material-icons {
+  color: #fff;
+  font-size: 30px;
 }
 
 .notice .notice-line .inner__right {
   width: 45%;
   height: 100%;
-  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.notice .notice-line .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.notice .notice-line .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice .notice-line .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
 }
