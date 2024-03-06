@@ -389,5 +389,19 @@ header .badges .badge {
   /* height: 200px; ①inner 높이 200px 지정 후 적용되는 이유 */
   /* ③inner의 높이 값 지정으로 높이200px로 적용된다. */
   /* ⑥결국, inner 높이값 지정으로 notice-line, bg-left/right 높이값을 한번에 제어하고 있다. */
-  border: 2px solid red; /* 영역 확인 */
+  /* border: 2px solid red; 영역 확인 */
+  display: flex;
+  /* 무슨 차이일까? 뷰포트에 변화가 없음 (자식요소 inner__lef,right가 수평이 되는 것?? */
+}
+
+.notice .notice-line .inner__left {
+  width: 55%;
+  height: 100%;
+  background-color: #333;
+}
+
+.notice .notice-line .inner__right {
+  width: 45%;
+  height: 100%;
+  
 }
