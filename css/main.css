@@ -408,11 +408,12 @@ header .badges .badge {
   margin-right: 20px;
 }
 
-.notice .notice-line .inner__left .swiper-contatiner {
+.notice .notice-line .inner__left .swiper-container {
   height: 62px; /* 3.높이값을 다시 주면 원래대로 돌아온다. */
   /* background-color: orange; 2.해당 auto높이??가 풀리면서 적용이 안된다. */
   flex-grow: 1; 
   /* 최대한 늘어나라 */
+  background-color: orange;
 }
 
 .notice .notice-line .inner__left .notice-line__more {
