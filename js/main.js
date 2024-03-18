@@ -51,5 +51,6 @@ fadeEls.forEach(function(fadeEl, index){
 new Swiper('.notice-line .swiper-container', {
   direction: 'vertical',
   autoplay: true,
-  loop: true /* 반복재생 여부 설정 */
+  loop: true 
+  /* 반복재생 여부 설정 */
 });
