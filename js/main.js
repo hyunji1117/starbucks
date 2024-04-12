@@ -62,6 +62,16 @@ new Swiper('.promotion .swiper-container', {
   loop: true,
   autoplay: {
     delay: 5000
+  },
+
+  pagination: {
+    el: '.promotion .swiper-pagination', //페이지 번호 요소로 사용하는 선택자 이용
+    clickable: true //클릭하여 적용할 수 있는지 제어하는 기능
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev', //이전버튼
+    nextEl: '.promotion .swiper-next'  //다음버튼
   }
 } );
+
 
