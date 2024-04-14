@@ -74,4 +74,33 @@ new Swiper('.promotion .swiper-container', {
   }
 } );
 
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false; //프로모션 영역이 숨겨져 있니 확인 > 화면에 잘 보여서 false 불린 데이터 사용
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion //!값을 반대로 만들어 달라는 뜻
+  if (isHidePromotion) {
+    //true이면, 숨김처리 해야 한다!
+    promotionEl.classList.add('hide');
+  } else {
+    //false면, 보임처리 해야 한다!
+    promotionEl.classList.remove('hide');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
